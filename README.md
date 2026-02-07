@@ -1,33 +1,26 @@
-TalentScout AI: Agentic Hiring Assistant
+# 🤖 TalentScout AI: Agentic Technical Recruiter
 
-TalentScout AI is a conversational Gen AI application designed to automate the initial phases of technical recruitment. Unlike traditional keyword-based ATS systems, this tool uses a "Candidate-First" approach, dynamically discovering a candidate's tech stack and generating real-time technical assessments through natural dialogue.
+**TalentScout AI** is a conversational Gen AI application designed to automate technical pre-screening. Built with **Gemini 2.0 Flash**, it conducts dynamic "Tech-Stack Discovery" through dialogue rather than passive resume parsing, ensuring a more accurate and interactive candidate evaluation.
 
-🚀 Key Features
-Active Tech-Stack Discovery: Moves beyond static resume parsing by engaging candidates in a multi-turn conversation to identify their core competencies.
+## 🚀 Key Features
+- **Adaptive Technical Screening**: Dynamically generates targeted technical questions based on the candidate's self-identified tech stack.
+- **Active Discovery Flow**: No resume required. The agent follows a strict process to gather info and audit skills in real-time.
+- **Vanilla Python Implementation**: Built using the native **Google Gen AI SDK** for maximum control over prompt orchestration and minimal latency.
+- **Professional Guardrails**: Includes strict behavioral instructions to maintain a recruiting persona and refuse off-topic queries.
 
-Adaptive Technical Screening: Dynamically generates targeted technical questions based on the candidate's specific frameworks and languages.
+## 🛠️ Tech Stack
+- **LLM**: Google Gemini 2.0 Flash (`gemini-2.0-flash`)
+- **Web Interface**: Streamlit
+- **Environment Management**: Python-dotenv
+- **Orchestration**: Direct Native SDK integration (No LangChain)
 
-Zero-Dependency Logic: Built using the native Google Gen AI SDK rather than high-level abstractions like LangChain, ensuring full control over prompt orchestration and minimal latency.
-
-Strict Behavioral Guardrails: System-level instructions ensure the agent remains professional and refuses off-topic queries.
-
-🛠️ Tech Stack
-LLM: Google Gemini 2.0 Flash (via google-genai)
-
-Backend: Python 3.x
-
-Web Framework: Streamlit (for real-time chat interface)
-
-Environment Management: python-dotenv for secure API handling
-
-📂 Project Structure
-
+## 📂 Project Structure
+```text
 TalentScout/
-├── app.py              # Streamlit UI and Session State management
-├── llm_helper.py       # Core LLM orchestration and Gemini API integration
-├── .env                # Private API keys (not included in repo)
-├── .env.example        # Template for environment variables
-├── .gitignore          # Rules to exclude venv, logs, and sensitive data
+├── app.py              # Streamlit UI & Chat Logic
+├── llm_helper.py       # Gemini API Integration & Prompt Engineering
+├── .env.example        # Template for Gemini API Key
+├── .gitignore          # Rules for excluded files (venv, .env, __pycache__)
 └── requirements.txt    # Project dependencies
 
 
@@ -61,11 +54,5 @@ GEMINI_API_KEY=your_actual_api_key_here
 
 streamlit run app.py
 
-🧠 Strategic Approach 
-This project demonstrates a deep understanding of Generative AI Orchestration:
-
-Context Management: Uses Streamlit's session_state to maintain chat history across reruns.
-
-System Instructions: Leverages native Gemini system prompts to enforce a strict four-step recruitment process.
 
 Error Handling: Implements robust error catching during API calls to ensure a seamless candidate experience
