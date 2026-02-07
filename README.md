@@ -30,11 +30,13 @@ TalentScout/
 
 ```
 git clone https://github.com/your-username/TalentScout.git
+
 cd TalentScout
 ```
 **2.Create a virtual Enviroment**
 ```
 python -m venv venv
+
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 ```
@@ -44,17 +46,16 @@ pip install -r requirements.txt
 ```
 
 **4.Configure Environment Variables**
-```
 Create a .env file in the root directory.
+```
 Add your Gemini API Key:
 
 GEMINI_API_KEY=your_actual_api_key_here
 
-```
+
 **5.Run the Application**
 ```
 streamlit run app.py
 
-
-Error Handling: Implements robust error catching during API calls to ensure a seamless candidate experience
 ```
+Error Handling: Implements robust error catching during API calls to ensure a seamless candidate experience
