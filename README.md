@@ -22,37 +22,39 @@ TalentScout/
 ├── .env.example        # Template for Gemini API Key
 ├── .gitignore          # Rules for excluded files (venv, .env, __pycache__)
 └── requirements.txt    # Project dependencies
+```
 
+##⚙️ Installation & Setup
 
-⚙️ Installation & Setup
+**1.Clone the Repository**
 
-1.Clone the Repository
-
+```
 git clone https://github.com/your-username/TalentScout.git
 cd TalentScout
-
-2.Create a virtual Enviroment
-
+```
+**2.Create a virtual Enviroment**
+```
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-
-3.Install Dependencies
-
+```
+**3.Install Dependencies**
+```
 pip install -r requirements.txt
+```
 
-
-4.Configure Environment Variables
-
+**4.Configure Environment Variables**
+```
 Create a .env file in the root directory.
 Add your Gemini API Key:
 
 GEMINI_API_KEY=your_actual_api_key_here
 
-
-5.Run the Application
-
+```
+**5.Run the Application**
+```
 streamlit run app.py
 
 
 Error Handling: Implements robust error catching during API calls to ensure a seamless candidate experience
+```
