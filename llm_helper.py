@@ -38,7 +38,7 @@ def get_ai_responses(messages):
             contents=chat_contents,
             config={
                 "system_instruction": system_instruction,
-                "temperature":0.7
+                "temperature":0.1
             }
         )
         return response.text
